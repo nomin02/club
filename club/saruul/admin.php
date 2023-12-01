@@ -15,7 +15,7 @@
             <form action="admin_process_login.php" method="post">
                 <div class="input-container">
                     <div class="input-name">
-                        <input type="text" name="admin_id" placeholder="Admin ID" class="text-name">
+                        <input type="text" name="admin_id" placeholder="Username" class="text-name">
                     </div>
 
                     <div class="input-name">
@@ -24,8 +24,8 @@
                 </div>
 
                 <div class="button-container">
-                    <input type="submit" name="login" value="Login" class="button">
-                    <input type="button" value="Cancel" onclick="location.href='/saruu/login.php';" class="button">
+                    <input type="submit" name="login" value="Login" onclick="location.href='admin_process.php';"class="button">
+                    <input type="button" value="Cancel" onclick="location.href='../nomin/index.php';" class="button">
                 </div>
             </form>
         </div>

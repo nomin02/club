@@ -19,7 +19,7 @@ session_start();
           <li><a href="">Home</a></li>
           <li><a href="">Club</a></li>
           <li><a href="">My account</a></li>
-          <li><a href="login.php?logout=<?php echo $user_id; ?>" onclick="return confirm('Are you sure you want to exit?');" >Logout</a></li>
+          <li><a href="../nomin/logout.php">Logout</a></li>
         </ul>
       </td>
       <td class=""><a href=""><button type="button">Member</button></a></td>

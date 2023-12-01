@@ -7,6 +7,7 @@ session_start();
     <meta charset="utf-8">
     <title>Club</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src = "confirm.js"></script>
     <style>
         body{background-color:rgb(203, 135, 235);}
         </style>
@@ -17,12 +18,11 @@ session_start();
       <td class="home">
         <ul>
           <li><a href="../nomin/index.php">Home</a></li>
-          
-          <li><a href="">My account</a></li>
-          <li><a href="login.php?logout=<?php echo $user_id; ?>" onclick="return confirm('Are you sure you want to exit?');" >Logout</a></li>
+          <li><a href="../munh/myacc.php">My account</a></li>
+          <li><a href="../saruul/login.php">Logout</a></li>
         </ul>
       </td>
-      <td class=""><a href="../adiya/list.php"><button type="button">Request</button></a></td>
+      <td class=""><a href="../adiya/slist.php"><button type="button">Request</button></a></td>
       
     </tr>
     <tr>      
