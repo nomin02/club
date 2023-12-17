@@ -1,13 +1,9 @@
-<?php 
-session_start();
-?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Club</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src = "confirm.js"></script>
     <style>
         body{background-color:rgb(203, 135, 235);}
         </style>
@@ -15,13 +11,30 @@ session_start();
 <body>
   <table class="main">
     <tr>
-      <td class="home">
-        <ul>
-          <li><a href="../nomin/index.php">Home</a></li>
-          <li><a href="../munh/myacc.php">My account</a></li>
-          <li><a href="../saruul/login.php">Logout</a></li>
-        </ul>
-      </td>
+    <nav class="nav">
+                <!--Menu-->
+                    <nav class="nav">
+                        <!-- Logo -->
+                        <div class="logo"><i class = "fas fa-blog"></i>
+                        <p style="display:inline-block;">
+                            <a href="index.php" class="logo">
+                                <img src="../nomin/images/iuulogo_.jpg" alt="" />
+                                <h1 class = "h1_logo">ОУУИС</h1>
+                            </a>
+                        </p>
+                            
+                        </div>
+                        <form method="post" action = "search_result.php">
+                        <!--Menu-->
+                        <ul class = "menu">
+                            <li><a href="../nomin/index.php">Home</a></li>
+                            <li><a href="../munh/myacc1.php">My account</a></li>
+                            <li><a href="./logout.php" >Logout</a></li>
+                            <li><input type="text" placeholder="Search.." name = "search" required="required"/></li><button>search</button>
+        
+                        </ul>
+                        </form>
+    </nav>
       <td class=""><a href="../adiya/slist.php"><button type="button">Request</button></a></td>
       
     </tr>
@@ -39,7 +52,8 @@ session_start();
  <?php
       $connection = mysqli_connect("localhost","root","");
       $db = mysqli_select_db($connection,'club');
-      $query = "SELECT * FROM club Where id='1'";
+      $club_id = $_GET['a'];
+      $query = "SELECT * FROM club Where id = $club_id";
       $query_run = mysqli_query($connection,$query); 
          while($row = mysqli_fetch_array($query_run)){
   ?>
@@ -64,7 +78,8 @@ session_start();
   <?php
     $connection = mysqli_connect("localhost","root","");
     $db = mysqli_select_db($connection,'club');
-    $query = "SELECT * FROM activity Where id='12'";
+    $club_id = $_GET['a'];
+    $query = "SELECT * FROM activity Where id= $club_id";
     $query_run = mysqli_query($connection,$query); 
     while($row = mysqli_fetch_array($query_run)){
    ?>
@@ -85,7 +100,8 @@ session_start();
 <?php
   $connection = mysqli_connect("localhost","root","");
   $db = mysqli_select_db($connection,'club');
-  $query = "SELECT * FROM club Where id='1'";
+  $club_id = $_GET['a'];
+  $query = "SELECT * FROM activity Where id=$club_id";
   $query_run = mysqli_query($connection,$query);
   while($row = mysqli_fetch_array($query_run)){
 ?>

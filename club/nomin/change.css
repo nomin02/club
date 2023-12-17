@@ -2,9 +2,6 @@
     --text-color: #f8f8ff;
     --background-color: #BB8FCE;
   }
-  body{
-    background-color: #BB8FCE;
-  }
 #wrapper{
     background-color: #BB8FCE;
     height:100vh;
@@ -18,7 +15,6 @@ a {
     text-decoration: none;
 }
 .nav {
-    width: 100%;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
@@ -32,7 +28,6 @@ a {
    text-align: center;
    display: inline-block;
    vertical-align: middle;
-   
 }
 .h1_logo{
     margin: 10px;
@@ -70,20 +65,22 @@ a {
     border-radius: 4px;
 }
 button {
+    background-color: #E2B9EC   ;
     border: none;
-    display: inline-block;
-    border-radius: 15px;
-    font-family: "paybooc-Light", sans-serif;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
-    background-color: aliceblue;
-    color: #1e6b7b;
+    color: white;
     padding: 10px 10px;
     text-align: center;
     text-decoration: none;
+    display: inline-block;
     font-size: 16px;
+}
+fieldset legend{
+    font-weight: bold;
+    font-size: 40px;
+}
+fieldset{
+    float: left;
+    margin:15px 20px;
 }
 @media screen and (max-width: 768px) {
     .nav {
@@ -117,16 +114,7 @@ button {
         display: flex;
     }
 }
-#wrap{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /* border: 1px solid red; */
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 20px;
-    background-color: #E2B9EC;
-}
+
 /* ------------------------ */
 #wrap{
     display: flex;
@@ -146,6 +134,7 @@ button {
     margin-left: 60px;
     overflow: hidden;
     width: 100%;
+    text-align: center;
 }
 .image-container img {
     margin-right: 24px;
@@ -158,46 +147,4 @@ button {
 .image-container a{
     padding: 10px;
     width: 100%;
-}
-
-/* ----------------------------- */
-.container_my-5{
-    background-color:#E2B9EC;
-    margin: 50px 50px 50px;
-    /* box-shadow: 0 0 10px 5px rgba(0,0,0,0.1); */
-    width: 90%;
-    height: 70%;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-
-}
-.button_{
-    margin: auto;
-    justify-content:space-around;
-    display: flex;
-}
-table {
-    border-collapse: collapse;
-    width: 100%;
-    float: left;
-     margin: 0 0 2em;
-    }
-thead{
-    border-bottom: 3px solid;
-}
-th{
-    padding: 0.35em 0.5em;
-    font-weight: 400;
-    text-align: center;
-    font-size: 1.25em;
-}
-td{
-    border: 3px solid;
-    margin: 10px;
-    height: 100px;
 }
